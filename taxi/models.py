@@ -19,7 +19,7 @@ class Car(models.Model):
     drivers = models.ManyToManyField(settings.AUTH_USER_MODEL, related_name="cars")
 
     class Meta:
-        ordering = ["model", "manufacturer", ]
+        ordering = ["model", ]
 
     def __str__(self):
         return f"{self.model} (Manufacturer:{self.manufacturer.name})"
